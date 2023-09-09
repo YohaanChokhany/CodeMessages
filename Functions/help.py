@@ -1,0 +1,46 @@
+from Functions.colours import Colours
+from time import sleep as wait
+import os
+import sys
+
+
+def help():
+    wait(.1)
+    print(Colours.ResetAll + '')
+    wait(.1)
+    print(Colours.ResetAll + Colours.underline + "HELP" + Colours.ResetAll)
+    wait(.1)
+    print(Colours.ResetAll + "")
+    wait(.1)
+    print(Colours.ResetAll + 'Profile            See your profile')
+    wait(.1)
+    print(Colours.ResetAll + 'Settings           Edit your profile')
+    wait(.1)
+    print(Colours.ResetAll + 'Send               Send messages to your friends')
+    wait(.1)
+    print(Colours.ResetAll + 'Inbox              View the messages your friends have sent you')
+    wait(.1)
+    print(Colours.ResetAll + 'Sign Out           Sign out from your account')
+    wait(.1)
+    print(Colours.ResetAll + '')
+    wait(.1)
+    print(Colours.ResetAll + "'menu'             Returns to Main Menu")
+    wait(.1)
+    print(Colours.ResetAll + "'exit'             Returns to the previous menu")
+    wait(.1)
+    print(Colours.ResetAll + "'delete'           Deletes message in Inbox")
+    wait(.1)
+    print(Colours.ResetAll + "'log out'          Log out of your account")
+    wait(.1)
+    print(Colours.ResetAll + '')
+    wait(.1)
+    print(Colours.ResetAll + "Press 'ENTER' to continue" + Colours.darkGray)
+    wait(.1)
+    foot = input("")
+    if foot.lower() == "log out":
+        print(Colours.ResetAll + '')
+        wait(.1)
+        print(Colours.ResetAll + Colours.green + Colours.bold + 'Logged out successfully' + Colours.ResetAll)
+        wait(1)
+        os.execv(sys.executable, ['python'] + sys.argv)
+    wait(.1)
